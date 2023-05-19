@@ -1128,6 +1128,20 @@ contract EVM_Wildcard_Resolver is
         }
         return result;
     }
+    
+    function toString(address _addr) public pure returns (string memory) {
+        bytes32 value = bytes32(uint256(uint160(_addr)));
+        bytes memory alphabet = "0123456789abcdef";
+
+        bytes memory str = new bytes(42);
+        str[0] = '0';
+        str[1] = 'x';
+        for (uint i = 0; i < 20; i++) {
+            str[2+i*2] = alphabet[uint8(uint8(value[i + 12] >> 4))];
+            str[3+i*2] = alphabet[uint8(uint8(value[i + 12]) & 0xf)];
+        }
+        return string(str);
+    }
 
     event linkENStoNFT (string ENS, uint256 Chain_Id, address NFT_Contract);
     function setLinkedContract(string memory name, uint256 NFTchainId, address nftaddr)
@@ -1196,8 +1210,9 @@ contract EVM_Wildcard_Resolver is
             if (functionName == 4 && equals(key, "avatar") && toUint(domain) >= 0) {
                 return abi.encode(bytes(string(abi.encodePacked("eip155:1/erc721:",addrOf[main].tokenContract,"/",domain))));
             }
-            if (functionName == 4 && equals(key, "description") && toUint(domain) >= 0) {
-                return abi.encode(bytes(wildcard.name()));
+            if (functionName == 4 && equals(key, "avatar") && toUint(domain) >= 0) {
+                string memory nftaddr = toString(addrOf[main].tokenContract);
+                return abi.encode(bytes(abi.encodePacked("eip155:1/erc721:",nftaddr,"/",domain)));
             }
             if (functionName == 4 && equals(key, "url") && toUint(domain) >= 0) {
                 return abi.encode(bytes(wildcard.tokenURI(toUint(domain))));
