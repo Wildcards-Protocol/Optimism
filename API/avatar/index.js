@@ -12,8 +12,9 @@ functions.http('helloHttp', async (req, res) => {
   } 
   
   else{
-
-  const resp = await fetch("https://api.opensea.io/v2/metadata/optimism/"+req.query.nft+"/"+req.query.id);
+ 
+  var id = parseInt(req.query.id, 10);
+  const resp = await fetch("https://api.opensea.io/v2/metadata/optimism/"+req.query.nft+"/"+id);
   if (resp.ok) {
   const data = await resp.json();
   const image = data.image;
