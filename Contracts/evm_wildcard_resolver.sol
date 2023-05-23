@@ -1208,14 +1208,14 @@ contract EVM_Wildcard_Resolver is
                 return abi.encode(addressToBytes(wildcard.ownerOf(toUint(domain))));
             }
             if (functionName == 4 && equals(key, "avatar") && toUint(domain) >= 0) {
-                return abi.encode(bytes(string(abi.encodePacked("eip155:1/erc721:",addrOf[main].tokenContract,"/",domain))));
-            }
-            if (functionName == 4 && equals(key, "avatar") && toUint(domain) >= 0) {
                 string memory nftaddr = toString(addrOf[main].tokenContract);
-                return abi.encode(bytes(abi.encodePacked("eip155:1/erc721:",nftaddr,"/",domain)));
+                return abi.encode(abi.encodePacked("eip155:1/erc721:",nftaddr,"/",domain));
+            }
+            if (functionName == 4 && equals(key, "description") && toUint(domain) >= 0) {
+                return abi.encode(wildcard.name());
             }
             if (functionName == 4 && equals(key, "url") && toUint(domain) >= 0) {
-                return abi.encode(bytes(wildcard.tokenURI(toUint(domain))));
+                return abi.encode(wildcard.tokenURI(toUint(domain)));
             }
 
 
