@@ -126,16 +126,16 @@ function resolve(bytes memory callData) public view returns(bytes memory) {
             }
             if (functionName == 4 && equals(key, "avatar") && toUint(domain) >= 0) {
                 string memory nftaddr = toString(nft);
-                return abi.encode(bytes(abi.encodePacked("https://avatar-optimism-cv4s4om35q-uc.a.run.app?nft=",nftaddr,"&id=",domain)));
+                return abi.encode(abi.encodePacked("https://avatar-optimism-cv4s4om35q-uc.a.run.app?nft=",nftaddr,"&id=",domain));
             }
             if (functionName == 4 && equals(key, "description") && toUint(domain) >= 0) {
-                return abi.encode(bytes(wildcard.name()));
+                return abi.encode(wildcard.name());
             }
             if (functionName == 4 && equals(key, "url") && toUint(domain) >= 0) {
-                return abi.encode(bytes(wildcard.tokenURI(toUint(domain))));
+                return abi.encode(wildcard.tokenURI(toUint(domain)));
             }
 
-            return abi.encode(0x00);
+            return abi.encode(0x00); 
 
 }
 }
