@@ -5,17 +5,6 @@
  * @param {!express:Response} res HTTP response context.
  */
 exports.helloWorld = (req, res) => {
-  res.set('Access-Control-Allow-Origin', '*');
-  
-  if (req.method === 'OPTIONS') {
-    // Send response to OPTIONS requests
-    res.set('Access-Control-Allow-Methods', '*');
-    res.set('Access-Control-Allow-Headers', '*');
-    res.status(204).send('');
-  } 
-  
-  else{
-
     const Web3 = require('web3');
     const web3 = new Web3("...........");  //Optimism http rpc url
     const address = ".........."; //Optimism_Wildcard_Registry Contract address
@@ -28,6 +17,4 @@ exports.helloWorld = (req, res) => {
     function(error, result){
     res.send({"data": result}); 
     })
-  }
-  
 }
