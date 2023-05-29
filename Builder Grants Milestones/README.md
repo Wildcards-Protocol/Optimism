@@ -1,0 +1,17 @@
+
+| Milestone Type | Milestone | Source of Truth | Deadline |
+|---|---|---|---|
+| 1. Benchmark | Create a waitlist form on wildcards.wtf | Website | :white_check_mark: |
+| 2. Benchmark | Deploy ENS Wildcard Resolver contract on Goerli Testnet. The resolver contract provides a resolver stub that implements CCIP Read (EIP 3668) and ENS wildcard resolution (ENSIP 10). When queried for a name, it directs the client to query the gateway server. When called back with the gateway server response, the resolver verifies the signature was produced by an authorised signer and returns the resolved address to the client | Contract address: [0x54Ad40CBb60673C5b585F477C041Db8BCE5f786E](https://goerli.etherscan.io/address/0x54ad40cbb60673c5b585f477c041db8bce5f786e#code) | :white_check_mark: |
+| 3. Benchmark | Deploy Optimism gateway server: The gateway server implements CCIP Read (EIP 3668) and answers name query requests by looking up the current owner of an NFT in an Optimism collection | 1. [Transaction to set gateway url](https://goerli.etherscan.io/tx/0xf41f314fa321bcfbed130f77011c5ff7717f4c2c8f244e339e92b2f07a937980) 2. [Gateway API URL](https://us-central1-ens-wildcards.cloudfunctions.net/optimism?sender={sender}&data={data}) 3. [Gateway Serverless function code](https://github.com/Wildcards-Protocol/Optimism/tree/main/API/ccip-forwarder-gateway) | :white_check_mark: |
+| 4. Critical | Deploy Collection-Registry contract on Optimism | Contract address: [0xf12Ca7007D5258A5d98c5da6437674Ca704a2561](https://optimistic.etherscan.io/address/0xf12ca7007d5258a5d98c5da6437674ca704a2561#code), [Open-source Contract Code](https://github.com/Wildcards-Protocol/Optimism/blob/main/Contracts/wildcard_registry.sol) | :white_check_mark: |
+| 5. Benchmark | Get 10 NFT projects on Optimism to commit to beta testing our platform | Private & public discussions with individual projects | September 30 |
+| 6. Benchmark | Run tests with our alpha test group, collect feedback and iterate | Private & public discussions with individual projects | October 31 |
+| 7. Critical | Deploy ENS Wildcard Resolver contract (3 above) on Eth Mainnet & continue tests in anticipation of public launch | Contract address: [0x53e42d7b919C72678996C3F3486F93E75946A47C](https://etherscan.io/address/0x53e42d7b919c72678996c3f3486f93e75946a47c#code), [Open-source Contract Code](https://github.com/Wildcards-Protocol/Optimism/blob/main/Contracts/evm_wildcard_resolver.sol) | :white_check_mark: |
+| 8. Critical | (Public launch) Create a General purpose frontend to link ENS domains to Optimism NFT collections. (Can be used for any N
+
+FT collection on Optimism) | Working front-end on wildcards.wtf that any person/project can use. | December 20 |
+| 9. Critical | Open-Source our contracts and L2 gateway & release documentation for community devs to build integrations for stand-alone NFT collections (instead of using our general-purpose front-end & contracts) | Docs released on website (wildcards.wtf) & Public Github repository link | Jan 31 2024 |
+| 10. Benchmark | Ongoing support for devs building on top of our platform. This will include integration bounties & bug bounties | Bounty programs posted via social media and website | - - - |
+| 11. Benchmark | Onboard over 50 NFT communities. (A potential 500,000 wildcard ENS subdomains assuming each collection has 10k items) | List of onboarded communities posted on the website and social media | - - - |
+
