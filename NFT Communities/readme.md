@@ -10,4 +10,5 @@
 | 8. tiny based frogs | Base | tinybasedfrogs.eth, basedfrogs.eth| [78.tinybasedfrogs.eth](https://app.ens.domains/78.tinybasedfrogs.eth)| 999 |
 | 9. Base Wars | Base | basewars.eth| [545.basewars.eth](https://app.ens.domains/545.basewars.eth)| 13566 |
 | 10. Summer Kevin | Base | summerkevin.eth| [33.summerkevin.eth](https://app.ens.domains/33.summerkevin.eth)| 24317 |
-| | | | TOTAL | 64696 (excluding non pfp collections) |
+| | | | TOTAL | 64696 
+(excluding non pfp collections) |
