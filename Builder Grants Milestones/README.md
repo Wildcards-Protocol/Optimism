@@ -7,7 +7,7 @@
 | 5. Benchmark | Get 10 NFT projects on OP-Chains to commit to beta testing | [NFT Communities onboarded during on-going beta testing](https://github.com/Wildcards-Protocol/Optimism/tree/main/NFT%20Communities) | :white_check_mark: completed |
 | 6. Benchmark | Run tests with our alpha test group, collect feedback and iterate | Private & public discussions with individual projects | :white_check_mark: completed |
 | 7. Critical | Deploy ENS Wildcard Resolver contract on Eth Mainnet | [Contract address](https://etherscan.io/address/0x53e42d7b919c72678996c3f3486f93e75946a47c#code), [Open-source Code](https://github.com/Wildcards-Protocol/Optimism/blob/main/Contracts/evm_wildcard_resolver.sol) | :white_check_mark: completed|
-| 8. Critical | (Public launch) Create a General purpose frontend to link ENS domains to Optimism NFT collections. | Working front-end on wildcards.wtf that any person/project can use. | December 20 |
+| 8. Critical | (Public launch) Create a General purpose frontend to link ENS domains to Optimism NFT collections. | Working front-end on wildcards.wtf that any person/project can use. | :white_check_mark: completed |
 | 9. Critical | Open-Source our contracts and L2 gateway & release documentation for community devs to build integrations | Docs released on website (wildcards.wtf) & Public Github repository link | Jan 31 2024 |
 | 10. Benchmark | Ongoing support for devs building on top of our platform. This will include integration bounties & bug bounties | Bounty programs posted via social media and website | - - - |
 | 11. Benchmark | Onboard over 50 NFT communities. | List of onboarded communities posted on the website and social media | - - - |
