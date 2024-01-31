@@ -7,7 +7,7 @@ interface nftContract {
     function name() external view returns(string memory);
 }
 
-contract Optimism_Wildcard_Registry {
+contract Wildcard_Registry {
 
 
 function compare(string memory _a, string memory _b) internal pure returns(int) {
