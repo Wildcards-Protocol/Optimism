@@ -77,5 +77,4 @@ Configure L2 network support effortlessly by invoking the `setGateway` function 
 
 ---
 
-*Note: The provided links should be updated with the actual links to your repository and contracts.*
 
