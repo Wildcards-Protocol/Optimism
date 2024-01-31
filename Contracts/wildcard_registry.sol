@@ -126,7 +126,7 @@ function resolve(bytes memory callData) public view returns(bytes memory) {
             }
             if (functionName == 4 && equals(key, "avatar") && toUint(domain) >= 0) {
                 string memory nftaddr = toString(nft);
-                return abi.encode(abi.encodePacked("https://avatar-optimism-cv4s4om35q-uc.a.run.app?nft=",nftaddr,"&id=",domain));
+                return abi.encode(abi.encodePacked("https://avatar-optimism-cv4s4om35q-uc.a.run.app?nft=",nftaddr,"&id=",domain));  //url to get NFT avatar
             }
             if (functionName == 4 && equals(key, "description") && toUint(domain) >= 0) {
                 return abi.encode(wildcard.name());
